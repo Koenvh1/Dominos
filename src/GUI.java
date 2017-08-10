@@ -26,12 +26,7 @@ public class GUI extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800, 600);
         setVisible(true);
-        drawButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                playTile = "draw";
-            }
-        });
+        drawButton.addActionListener(e -> playTile = "draw");
         revalidate();
         repaint();
     }

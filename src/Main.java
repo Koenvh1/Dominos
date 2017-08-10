@@ -38,18 +38,10 @@ public class Main {
         int dialogButton = JOptionPane.YES_NO_OPTION;
         int dialogResult = JOptionPane.showConfirmDialog(gui, "Is player 1 an AI?", "AI or human?", dialogButton);
         boolean player1AI = false;
-        if(dialogResult == 0) {
-            player1AI = true;
-        } else {
-            player1AI = false;
-        }
+        player1AI = dialogResult == 0;
         dialogResult = JOptionPane.showConfirmDialog(gui, "Is player 2 an AI?", "AI or human?", dialogButton);
         boolean player2AI = false;
-        if(dialogResult == 0) {
-            player2AI = true;
-        } else {
-            player2AI = false;
-        }
+        player2AI = dialogResult == 0;
 
         /*
         System.out.println("Do you want to enable the GUI? (yes/no)");
